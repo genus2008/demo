@@ -14,6 +14,6 @@ public class HelloController {
     @GetMapping("/hello")
     public String hello() {
         Long views = stringRedisTemplate.opsForValue().increment("views");
-        return "hello ,thank you .views:" + views;
+        return "hello ,thank you 1 .views:" + views;
     }
 }
