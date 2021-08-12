@@ -1,0 +1,14 @@
+version: 3.5
+
+services:
+  libinapp:
+    build: .
+    image: libinapp
+    depends_on:
+      - redis
+    ports:
+      - "8080:8080"
+
+  redis:
+    iamge: "library/redis:alpine"
+
